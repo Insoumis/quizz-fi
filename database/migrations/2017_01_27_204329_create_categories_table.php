@@ -20,20 +20,22 @@ class CreateCategoriesTable extends Migration
             $table->timestamps();
         });
 
-        $categories = ["La 6e république",
-            "Protéger et partager",
-            "La plannification écologique",
-            "Sortir des traités européens",
-            "Pour l'indépence de la france",
-            "Le progrès humain d'abord",
-            "La france aux frontières de l'humanité",
+        $categories = [
+            1 => "La 6e république",
+            2 => "Protéger et partager",
+            3 => "La plannification écologique",
+            4 => "Sortir des traités européens",
+            5 => "Pour l'indépence de la france",
+            6 => "Le progrès humain d'abord",
+            7 => "La france aux frontières de l'humanité",
         ];
 
-        foreach ($categories as $category) {
+        foreach ($categories as $id => $category) {
             \Melenquizz\Category::forceCreate([
-                    'name' => $category,
-                    'slug' => str_slug($category),
-                ]);
+                'id' => $id,
+                'name' => $category,
+                'slug' => str_slug($category),
+            ]);
         }
     }
 
