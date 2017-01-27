@@ -14,7 +14,7 @@ class AddCategoryToQuestions extends Migration
     public function up()
     {
         Schema::table('questions', function (Blueprint $table) {
-            $table->unsignedInteger('category_id')->required();
+            $table->unsignedInteger('category_id')->required()->after('id');
             $table->foreign('category_id')->references('id')->on('categories')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');

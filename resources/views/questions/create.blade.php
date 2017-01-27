@@ -25,6 +25,11 @@
                                 <textarea name="name" id="name" class="form-control" rows="5">{{ old('name') }}</textarea>
                             </div>
 
+                            <div class="form-group {{ $errors->has('page_no') ? 'has-error' : '' }}">
+                                <label for="page_no" class="control-label">Page n°</label>
+                                <input step="1" min="1" name="page_no" id="page_no" type="number" class="form-control" value="{{ old('page_no') }}"/>
+                            </div>
+
                             <button type="submit" class="btn btn-success">Ajouter</button>
                         </form>
                     </div>

@@ -41,7 +41,8 @@ class QuestionController extends Controller
     {
         $question = Question::add(
             $request->get('category_id'),
-            $request->get('name')
+            $request->get('name'),
+            $request->get('page_no')
         );
 
         $question->save();
