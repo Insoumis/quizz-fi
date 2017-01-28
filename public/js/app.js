@@ -40664,7 +40664,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "row"
   }, [_c('div', {
     staticClass: "col-md-6"
-  }, [_c('h2', [_vm._v(_vm._s(_vm.question.category.name))])]), _vm._v(" "), _c('div', {
+  }, [_c('h2', {
+    style: ({
+      color: _vm.question.category.color
+    })
+  }, [_vm._v(_vm._s(_vm.question.category.name))])]), _vm._v(" "), _c('div', {
     staticClass: "col-md-6 text-right"
   }, [(!!_vm.question.question.page_no) ? [_c('strong', [_vm._v("Page " + _vm._s(_vm.question.question.page_no))])] : _vm._e()], 2)]), _vm._v(" "), _c('p', {
     staticClass: "proposition",

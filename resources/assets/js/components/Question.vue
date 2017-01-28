@@ -4,7 +4,7 @@
 
             <div class="row">
                 <div class="col-md-6">
-                    <h2>{{ question.category.name }}</h2>
+                    <h2 :style="{color: question.category.color}">{{ question.category.name }}</h2>
                 </div>
                 <div class="col-md-6 text-right">
                     <template v-if="!!question.question.page_no">
