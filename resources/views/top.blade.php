@@ -6,7 +6,8 @@
             <div class="col-md-8 col-md-offset-2">
 
 
-                <a href="{{ route('index') }}" class="btn btn-info"><i class="glyphicon glyphicon-home"></i> Retour à l'accueil</a>
+                <a href="{{ route('index') }}" class="btn btn-info"><i class="glyphicon glyphicon-home"></i> Retour à
+                    l'accueil</a>
 
                 <div class="panel panel-default">
                     <div class="panel-body">
@@ -33,7 +34,8 @@
                     </div>
                 </div>
 
-                <a href="{{ route('index') }}" class="btn btn-info"><i class="glyphicon glyphicon-home"></i> Retour à l'accueil</a>
+                <a href="{{ route('index') }}" class="btn btn-info"><i class="glyphicon glyphicon-home"></i> Retour à
+                    l'accueil</a>
 
             </div>
         </div>
