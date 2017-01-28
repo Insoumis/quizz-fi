@@ -16,7 +16,7 @@
                     <div class="panel-heading">
                         <div class="pull-right">
                             <a class="btn btn-success btn-sm" href="{{ route('questions.create') }}"><i
-                                        class="glyphicon glyphicon-plus-sign"></i></a>
+                                        class="fa fa-plus-circle"></i></a>
                         </div>
                         Questions
                         <div class="clearfix"></div>
@@ -39,11 +39,11 @@
                                     <td>{{ str_limit($question->proposition, 120) }}</td>
                                     <td class="text-right">
                                         <a href="{{ route('questions.edit', $question) }}" class="btn btn-info btn-sm">
-                                            <i class="glyphicon glyphicon-pencil"></i>
+                                            <i class="fa fa-pencil"></i>
                                         </a>
                                         <a href="#" class="btn btn-danger btn-sm"
                                            onclick="removeQuestion('remove-form-{{$question->id}}', event)">
-                                            <i class="glyphicon glyphicon-trash"></i>
+                                            <i class="fa fa-trash fa-2"></i>
                                         </a>
                                         <form
                                                 action="{{ route('questions.destroy', $question) }}"

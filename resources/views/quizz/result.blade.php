@@ -9,7 +9,7 @@
                     <div class="panel-body">
 
                         <a class="btn btn-success" href="{{ route('top') }}">
-                            <i class="glyphicon glyphicon-sort-by-attributes-alt"></i>
+                            <i class="fa fa-trophy"></i>
                             Top des propositions
                         </a>
 

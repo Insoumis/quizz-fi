@@ -37,9 +37,17 @@
                         </form>
 
                         <a class="btn btn-success" href="{{ route('top') }}">
-                            <i class="glyphicon glyphicon-sort-by-attributes-alt"></i>
+                            <i class="fa fa-trophy"></i>
                             Top des propositions
                         </a>
+
+
+                        <div class="share-controls">
+                            <a href="http://www.facebook.com/sharer/sharer.php?u={{ URL::full() }}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="http://twitter.com/intent/tweet?status={{ urlencode('truc & machin ' . URL::full()) }}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="https://plus.google.com/share?url={{ URL::full() }}"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                        </div>
+
 
 
 
