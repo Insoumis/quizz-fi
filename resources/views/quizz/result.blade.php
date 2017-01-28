@@ -16,34 +16,47 @@
 
                         <h1>Résultats</h1>
 
+                        <p>
+                            <strong>Partager votre résultat sur les réseaux sociaux :</strong>
+                            <a href="http://www.facebook.com/sharer/sharer.php?u={{ URL::full() }}"><i
+                                        class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="http://twitter.com/intent/tweet?status={{ urlencode('Mon taux d\'accointance avec le programme de l\'Avenir en commun est de '.round($avgGlobal).'% : ' . URL::full()) }}"><i
+                                        class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="https://plus.google.com/share?url={{ URL::full() }}"><i class="fa fa-google-plus"
+                                                                                             aria-hidden="true"></i></a>
+                        </p>
+
                         <h2>Pourcentage d'accointance avec le programme l'Avenir en commun</h2>
                         <div class="progress">
                             <div class="progress-bar progress-bar-striped"
                                  role="progressbar"
-                                 aria-valuenow="{{$avgGlobal}}"
+                                 aria-valuenow="{{round($avgGlobal,2)}}"
                                  aria-valuemin="0"
                                  aria-valuemax="100"
-                                 style="width:{{$avgGlobal}}%"
+                                 style="width:{{round($avgGlobal,2)}}%"
                             >
-                                {{$avgGlobal}}%
+                                {{round($avgGlobal,2)}}%
                             </div>
                         </div>
 
 
                         @if ($quizz->type == "40")
-                            @foreach($avgByCategories as $category => $score)
-                                <h2>Pourcentage d'accointance avec le thème '{{ $categories->find($category)->name }}
-                                    '</h2>
+                            <h2>Pourcentage d'accointance par thème</h2>
+
+                        @foreach($avgByCategories as $category => $score)
+                                <h3 style="color: {{$categories->find($category)->color}}">
+                                    Pourcentage d'accointance avec le thème '{{ $categories->find($category)->name }}'
+                                </h3>
                                 <div class="progress">
                                     <div
                                             class="progress-bar progress-bar-striped"
                                             role="progressbar"
-                                            aria-valuenow="{{$score}}"
+                                            aria-valuenow="{{round($score,2)}}"
                                             aria-valuemin="0"
                                             aria-valuemax="100"
-                                            style="width:{{$score}}%"
+                                            style="width:{{round($score,2)}}%"
                                     >
-                                        {{$score}}%
+                                        {{round($score,2)}}%
                                     </div>
                                 </div>
                             @endforeach
