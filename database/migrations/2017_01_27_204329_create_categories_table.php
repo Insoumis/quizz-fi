@@ -22,12 +22,12 @@ class CreateCategoriesTable extends Migration
 
         $categories = [
             1 => ['name' => "La 6e république", 'color' => '#000'],
-            2 => ['name' => "Protéger et partager", 'color' => '#000'],
-            3 => ['name' => "La plannification écologique", 'color' => '#000'],
-            4 => ['name' => "Sortir des traités européens", 'color' => '#000'],
-            5 => ['name' => "Pour l'indépence de la france", 'color' => '#000'],
-            6 => ['name' => "Le progrès humain d'abord", 'color' => '#000'],
-            7 => ['name' => "La france aux frontières de l'humanité", 'color' => '#000'],
+            2 => ['name' => "Protéger et partager", 'color' => '#F00'],
+            3 => ['name' => "La plannification écologique", 'color' => '#0F0'],
+            4 => ['name' => "Sortir des traités européens", 'color' => '#00F'],
+            5 => ['name' => "Pour l'indépence de la france", 'color' => '#FF0'],
+            6 => ['name' => "Le progrès humain d'abord", 'color' => '#0FF'],
+            7 => ['name' => "La france aux frontières de l'humanité", 'color' => '#F0F'],
         ];
 
         foreach ($categories as $id => $category) {
