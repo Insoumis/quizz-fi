@@ -35,6 +35,14 @@
                                 </div>
                             </div>
                         </form>
+
+                        <a class="btn btn-success" href="{{ route('top') }}">
+                            <i class="glyphicon glyphicon-sort-by-attributes-alt"></i>
+                            Top des propositions
+                        </a>
+
+
+
                     </div>
                 </div>
             </div>
