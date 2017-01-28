@@ -13,8 +13,5 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/quizz', function (Request $request) {
-    return \Melenquizz\Quizz::with('questions', 'questions.question', 'questions.category')
-        ->where('uniqid', $request->get('id'))
-        ->firstOrFail();
-});
+Route::get('/quizz/{quizzId}', 'Api\QuizzController@show');
+Route::put('/quizz/{quizzId}', 'Api\QuizzController@update');

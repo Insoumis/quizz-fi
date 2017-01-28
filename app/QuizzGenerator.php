@@ -18,6 +18,8 @@ class QuizzGenerator
         $questions = $this->getQuestions($type, $repartions);
 
         $quizz = new Quizz;
+        $quizz->type = $type;
+        $quizz->completed = false;
         while (!$quizz->exists) {
             $quizz->uniqid = str_random(8);
             $quizz->save();

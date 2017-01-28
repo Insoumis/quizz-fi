@@ -11,8 +11,9 @@
 |
 */
 Route::get('/', 'IndexController@index')->name('index');
-Route::post('/quizz', 'QuizzController@generate')->name('generate_quizz');
-Route::get('/quizz/{unqid}', 'QuizzController@gameOn')->name('quizz');
+Route::post('quizz', 'QuizzController@generate')->name('generate_quizz');
+Route::get('quizz/{unqid}', 'QuizzController@gameOn')->name('quizz');
+Route::get('quizz/{unqid}/result', 'QuizzController@result')->name('quizz.result');
 
 
 // Authentication Routes

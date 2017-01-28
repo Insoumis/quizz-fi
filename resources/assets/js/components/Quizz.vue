@@ -5,23 +5,27 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
 
+                <div class="alert alert-danger" v-if="showAnswerQuestionText">
+                    Vous devez sélectionner une réponse.
+                </div>
+
                 <question v-for="question in quizz.questions" :question="question"
                           v-show="currentQuestion == question"></question>
 
                 <div class="row">
-                    <div class="col-md-4 text-left">
+
+                    <div class="col-md-6 text-left">
                         <button class="btn btn-primary" @click="previousQuestion"
                                 v-if="currentQuestion != firstQuestion"><i
                                 class="glyphicon glyphicon-circle-arrow-left"></i> Question précédente
                         </button>
                     </div>
-                    <div class="col-md-4 text-center">
-                        <button class="btn btn-success" @click="submit" v-if="allIsAnswered"><i
-                                class="glyphicon glyphicon-check"></i> Valider
+
+                    <div class="col-md-6 text-right">
+                        <button class="btn btn-success" @click="submit" v-if="currentQuestion == lastQuestion" :disabled="!allIsAnswered"><i
+                                class="glyphicon glyphicon-check"></i> Voir les résultats
                         </button>
-                    </div>
-                    <div class="col-md-4 text-right">
-                        <button class="btn btn-primary" @click="nextQuestion" v-if="currentQuestion != lastQuestion">
+                        <button class="btn btn-primary" @click="nextQuestion" v-if="currentQuestion != lastQuestion" :disabled="currentQuestionNeedAnswer">
                             Question suivante <i class="glyphicon glyphicon-circle-arrow-right"></i>
                          </button>
                     </div>
@@ -55,6 +59,9 @@
             lastQuestion() {
                 return this.quizz.questions[this.quizz.questions.length - 1]
             },
+            currentQuestionNeedAnswer() {
+                return this.currentQuestion.answer == null
+            },
         },
         components: {
             Question
@@ -65,19 +72,34 @@
                     questions: [],
                 },
                 currentQuestion: {},
+                showAnswerQuestionText: false,
             }
         },
         props: ['quizzId'],
 
         methods: {
             submit() {
-                alert('todo');
+                axios.put(`/api/quizz/${this.quizzId}`, this.quizz)
+                    .then((response) => {
+                            window.location.href = response.data;
+                        }
+                    )
+                    .catch((error) => {
+                        alert("Impossible de sauvegarder vos données, veuillez réessayer");
+                    });
             },
             previousQuestion() {
+                this.showAnswerQuestionText = false
                 const idx = _.indexOf(this.quizz.questions, this.currentQuestion)
                 this.currentQuestion = this.quizz.questions[idx - 1]
             },
             nextQuestion() {
+                this.showAnswerQuestionText = false
+                if (this.currentQuestionNeedAnswer) {
+                    this.showAnswerQuestionText = true
+                    return;
+                }
+
                 const idx = _.indexOf(this.quizz.questions, this.currentQuestion)
                 this.currentQuestion = this.quizz.questions[idx + 1]
             }
@@ -85,7 +107,7 @@
 
 
         mounted() {
-            axios.get(`/api/quizz?id=${this.quizzId}`)
+            axios.get(`/api/quizz/${this.quizzId}`)
                 .then((response) => {
                         this.quizz = response.data
                         this.currentQuestion = this.quizz.questions[0];

@@ -40402,8 +40402,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     methods: {
         submit: function submit() {
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.put('/api/quizz', this.quizz).then(function (response) {
-                console.log(response);
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.put('/api/quizz/' + this.quizzId, this.quizz).then(function (response) {
+                window.location.href = response.data;
             }).catch(function (error) {
                 alert("Impossible de sauvegarder vos données, veuillez réessayer");
             });
@@ -40428,7 +40428,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     mounted: function mounted() {
         var _this = this;
 
-        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/quizz?id=' + this.quizzId).then(function (response) {
+        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/quizz/' + this.quizzId).then(function (response) {
             _this.quizz = response.data;
             _this.currentQuestion = _this.quizz.questions[0];
         }).catch(function (error) {
