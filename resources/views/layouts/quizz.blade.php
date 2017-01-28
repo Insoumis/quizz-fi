@@ -11,7 +11,7 @@
     <title>{{ config('app.name') }}</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
+    <link href="{{ mix("/css/app.css") }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -26,6 +26,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
+    <script src="{{ mix("/js/app.js") }}"></script>
 </body>
 </html>
