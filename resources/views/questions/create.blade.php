@@ -20,14 +20,19 @@
                                 </select>
                             </div>
 
-                            <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
-                                <label for="name" class="control-label">Question</label>
-                                <textarea name="name" id="name" class="form-control" rows="5">{{ old('name') }}</textarea>
+                            <div class="form-group {{ $errors->has('proposition') ? 'has-error' : '' }}">
+                                <label for="proposition" class="control-label">Question</label>
+                                <textarea name="proposition" id="proposition" class="form-control" rows="5">{{ old('proposition') }}</textarea>
+                            </div>
+
+                            <div class="form-group {{ $errors->has('description') ? 'has-error' : '' }}">
+                                <label for="description" class="control-label">Question</label>
+                                <textarea name="description" id="description" class="form-control" rows="5">{{ old('description') }}</textarea>
                             </div>
 
                             <div class="form-group {{ $errors->has('page_no') ? 'has-error' : '' }}">
                                 <label for="page_no" class="control-label">Page n°</label>
-                                <input step="1" min="1" name="page_no" id="page_no" type="number" class="form-control" value="{{ old('page_no') }}"/>
+                                <input step="1" name="page_no" id="page_no" type="number" class="form-control" value="{{ old('page_no') }}"/>
                             </div>
 
                             <button type="submit" class="btn btn-success">Ajouter</button>

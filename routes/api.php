@@ -13,6 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/quizz', function (Request $request) {
+    return \Melenquizz\Quizz::with('questions', 'questions.question', 'questions.category')
+        ->where('uniqid', $request->get('id'))
+        ->firstOrFail();
 });

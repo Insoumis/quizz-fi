@@ -6,13 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Question extends Model
 {
-    public static function add($categoryId, $name, $pageNo)
+    public static function add($categoryId, $proposition, $description = null, $page_no = null)
     {
         $question = new self;
 
         $question->category_id = $categoryId;
-        $question->name = $name;
-        $question->page_no = $pageNo;
+        $question->proposition = $proposition;
+        $question->description = $description;
+        $question->page_no = $page_no;
 
         return $question;
     }

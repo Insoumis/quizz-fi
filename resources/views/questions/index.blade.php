@@ -34,7 +34,7 @@
                                 <tr>
                                     <td>{{ $question->id }}</td>
                                     <td>{{ $question->category->name }}</td>
-                                    <td>{{ str_limit($question->name, 120) }}</td>
+                                    <td>{{ str_limit($question->proposition, 120) }}</td>
                                 </tr>
                             @endforeach
                             </tbody>

@@ -16,25 +16,25 @@ class CreateCategoriesTable extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('slug');
+            $table->string('color');
             $table->timestamps();
         });
 
         $categories = [
-            1 => "La 6e république",
-            2 => "Protéger et partager",
-            3 => "La plannification écologique",
-            4 => "Sortir des traités européens",
-            5 => "Pour l'indépence de la france",
-            6 => "Le progrès humain d'abord",
-            7 => "La france aux frontières de l'humanité",
+            1 => ['name' => "La 6e république", 'color' => '#000'],
+            2 => ['name' => "Protéger et partager", 'color' => '#000'],
+            3 => ['name' => "La plannification écologique", 'color' => '#000'],
+            4 => ['name' => "Sortir des traités européens", 'color' => '#000'],
+            5 => ['name' => "Pour l'indépence de la france", 'color' => '#000'],
+            6 => ['name' => "Le progrès humain d'abord", 'color' => '#000'],
+            7 => ['name' => "La france aux frontières de l'humanité", 'color' => '#000'],
         ];
 
         foreach ($categories as $id => $category) {
             \Melenquizz\Category::forceCreate([
                 'id' => $id,
-                'name' => $category,
-                'slug' => str_slug($category),
+                'name' => $category['name'],
+                'color' => $category['color'],
             ]);
         }
     }

@@ -10,9 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'IndexController@index')->name('index');
+Route::post('/quizz', 'QuizzController@generate')->name('generate_quizz');
+Route::get('/quizz/{unqid}', 'QuizzController@gameOn')->name('quizz');
+
 
 // Authentication Routes
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login')->middleware('guest');
@@ -25,4 +26,5 @@ Route::group(['prefix' => 'some-secret-zone', 'middleware' => 'auth'], function 
     Route::get('questions', 'QuestionController@index')->name('questions.index');
     Route::get('questions/create', 'QuestionController@create')->name('questions.create');
     Route::post('questions', 'QuestionController@store')->name('questions.store');
+
 });

@@ -25,8 +25,8 @@ class AddQuestionRequest extends FormRequest
     {
         return [
             'category_id' => ['required', 'exists:categories,id'],
-            'name' => ['required'],
-            'page_no' => ['required', 'integer', 'min:1'],
+            'proposition' => ['required'],
+            'page_no' => ['integer'],
         ];
     }
 }
