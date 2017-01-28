@@ -6,7 +6,7 @@
             <div class="col-xs-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Ajouter une Questions
+                        Ajouter une Question
                     </div>
                     <div class="panel-body">
                         <form action="{{ route('questions.store') }}" method="post">
