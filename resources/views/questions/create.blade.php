@@ -21,12 +21,12 @@
                             </div>
 
                             <div class="form-group {{ $errors->has('proposition') ? 'has-error' : '' }}">
-                                <label for="proposition" class="control-label">Question</label>
+                                <label for="proposition" class="control-label">Proposition</label>
                                 <textarea name="proposition" id="proposition" class="form-control" rows="5">{{ old('proposition') }}</textarea>
                             </div>
 
                             <div class="form-group {{ $errors->has('description') ? 'has-error' : '' }}">
-                                <label for="description" class="control-label">Question</label>
+                                <label for="description" class="control-label">Description</label>
                                 <textarea name="description" id="description" class="form-control" rows="5">{{ old('description') }}</textarea>
                             </div>
 
