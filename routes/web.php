@@ -28,4 +28,5 @@ Route::group(['prefix' => 'some-secret-zone', 'middleware' => 'auth'], function 
     Route::post('questions', 'QuestionController@store')->name('questions.store');
     Route::get('questions/{question}', 'QuestionController@edit')->name('questions.edit');
     Route::put('questions/{question}', 'QuestionController@update')->name('questions.update');
+    Route::delete('questions/{question}', 'QuestionController@destroy')->name('questions.destroy');
 });

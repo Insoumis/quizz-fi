@@ -13,7 +13,7 @@
                             {{ method_field('put') }}
                             {{ csrf_field() }}
                             <div class="form-group">
-                                <label for="category_id" class="control-label">Thème</label>
+                                <label for="category_id" class="control-label">Thème<span class="mandatory-symbol">*</span></label>
                                 <select name="category_id" id="category_id" class="form-control">
                                     <option value=""></option>
                                     @foreach($categories as $category)
@@ -23,7 +23,7 @@
                             </div>
 
                             <div class="form-group {{ $errors->has('proposition') ? 'has-error' : '' }}">
-                                <label for="proposition" class="control-label">Proposition</label>
+                                <label for="proposition" class="control-label">Proposition<span class="mandatory-symbol">*</span></label>
                                 <textarea name="proposition" id="proposition" class="form-control"
                                           rows="5">{{ old('proposition', $question->proposition) }}</textarea>
                             </div>

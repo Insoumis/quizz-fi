@@ -21,6 +21,10 @@ class CreateQuizzQuestionsTable extends Migration
             $table->unsignedInteger('question_id');
             $table->unsignedSmallInteger('answer')->nullable(); // 0 - 25 - 50 - 75 - 100
 
+            $table->foreign('quizz_id')->references('id')->on('quizzs')->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

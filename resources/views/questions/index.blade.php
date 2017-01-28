@@ -41,10 +41,17 @@
                                         <a href="{{ route('questions.edit', $question) }}" class="btn btn-info btn-sm">
                                             <i class="glyphicon glyphicon-pencil"></i>
                                         </a>
-                                            <a href="#" class="btn btn-danger btn-sm" onclick="return alert('todo'); document.getElementById('remove-form-{{$question->id}}').submit()">
-                                                <i class="glyphicon glyphicon-trash"></i>
-                                            </a>
-                                        <form action="#" id="remove-form-{{$question->id}}" style="display:none;">
+                                        <a href="#" class="btn btn-danger btn-sm"
+                                           onclick="removeQuestion('remove-form-{{$question->id}}', event)">
+                                            <i class="glyphicon glyphicon-trash"></i>
+                                        </a>
+                                        <form
+                                                action="{{ route('questions.destroy', $question) }}"
+                                                id="remove-form-{{$question->id}}"
+                                                style="display:none;"
+                                                method="post"
+                                        >
+                                            {{ method_field("delete") }}
                                             {{ csrf_field() }}
                                         </form>
                                     </td>
@@ -58,3 +65,15 @@
         </div>
     </div>
 @endsection
+
+@push('js')
+<script>
+    const removeQuestion = function(formId, ev) {
+        ev.preventDefault();
+        const form = document.getElementById(formId);
+        if (confirm('Voulez-vous réellement supprimer cette proposition ?')) {
+            form.submit();
+        }
+    }
+</script>
+@endpush
