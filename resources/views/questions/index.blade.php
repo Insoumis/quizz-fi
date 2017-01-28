@@ -38,7 +38,7 @@
                                     <td>{{ $question->category->name }}</td>
                                     <td>{{ str_limit($question->proposition, 120) }}</td>
                                     <td class="text-right">
-                                        <a href="javascript:alert('todo')" class="btn btn-info btn-sm">
+                                        <a href="{{ route('questions.edit', $question) }}" class="btn btn-info btn-sm">
                                             <i class="glyphicon glyphicon-pencil"></i>
                                         </a>
                                             <a href="#" class="btn btn-danger btn-sm" onclick="return alert('todo'); document.getElementById('remove-form-{{$question->id}}').submit()">

@@ -9,31 +9,35 @@
                         Modifier une question
                     </div>
                     <div class="panel-body">
-                        <form action="{{ route('questions.store') }}" method="post">
+                        <form action="{{ route('questions.update', [$question->id]) }}" method="post">
+                            {{ method_field('put') }}
                             {{ csrf_field() }}
-                            <div class="form-group {{ $errors->has('category_id') ? 'has-error' : '' }}">
+                            <div class="form-group">
                                 <label for="category_id" class="control-label">Thème</label>
                                 <select name="category_id" id="category_id" class="form-control">
                                     <option value=""></option>
                                     @foreach($categories as $category)
-                                        <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected':''}}>{{ $category->name }}</option>
+                                        <option value="{{ $category->id }}" {{ old('category_id', $question->category_id) == $category->id ? 'selected':''}}>{{ $category->name }}</option>
                                     @endforeach
                                 </select>
                             </div>
 
                             <div class="form-group {{ $errors->has('proposition') ? 'has-error' : '' }}">
                                 <label for="proposition" class="control-label">Proposition</label>
-                                <textarea name="proposition" id="proposition" class="form-control" rows="5">{{ old('proposition') }}</textarea>
+                                <textarea name="proposition" id="proposition" class="form-control"
+                                          rows="5">{{ old('proposition', $question->proposition) }}</textarea>
                             </div>
 
                             <div class="form-group {{ $errors->has('description') ? 'has-error' : '' }}">
                                 <label for="description" class="control-label">Description</label>
-                                <textarea name="description" id="description" class="form-control" rows="5">{{ old('description') }}</textarea>
+                                <textarea name="description" id="description" class="form-control"
+                                          rows="5">{{ old('description', $question->description) }}</textarea>
                             </div>
 
                             <div class="form-group {{ $errors->has('page_no') ? 'has-error' : '' }}">
                                 <label for="page_no" class="control-label">Page n°</label>
-                                <input step="1" name="page_no" id="page_no" type="number" class="form-control" value="{{ old('page_no') }}"/>
+                                <input step="1" name="page_no" id="page_no" type="number" class="form-control"
+                                       value="{{ old('page_no', $question->page_no) }}"/>
                             </div>
 
                             <button type="submit" class="btn btn-success">Ajouter</button>

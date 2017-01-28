@@ -26,5 +26,6 @@ Route::group(['prefix' => 'some-secret-zone', 'middleware' => 'auth'], function 
     Route::get('questions', 'QuestionController@index')->name('questions.index');
     Route::get('questions/create', 'QuestionController@create')->name('questions.create');
     Route::post('questions', 'QuestionController@store')->name('questions.store');
-
+    Route::get('questions/{question}', 'QuestionController@edit')->name('questions.edit');
+    Route::put('questions/{question}', 'QuestionController@update')->name('questions.update');
 });

@@ -5,6 +5,7 @@ namespace Melenquizz\Http\Controllers;
 use Illuminate\Http\Request;
 use Melenquizz\Category;
 use Melenquizz\Http\Requests\AddQuestionRequest;
+use Melenquizz\Http\Requests\EditQuestionRequest;
 use Melenquizz\Question;
 
 class QuestionController extends Controller
@@ -52,37 +53,35 @@ class QuestionController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param Question $question
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Question $question)
     {
-        //
+        $categories = Category::all();
+        return view('questions.edit', compact('question', 'categories'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param EditQuestionRequest $request
+     * @param Question $question
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(EditQuestionRequest $request, Question $question)
     {
-        //
+        $question->edit(
+            $request->get('category_id'),
+            $request->get('proposition'),
+            $request->get('description'),
+            $request->get('page_no')
+        );
+        $question->save();
+
+        return redirect()->route('questions.index')->with('questions.success', 'Question modifiée !');
     }
 
     /**
