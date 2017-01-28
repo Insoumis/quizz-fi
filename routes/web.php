@@ -15,6 +15,7 @@ Route::post('quizz', 'QuizzController@generate')->name('generate_quizz');
 Route::get('quizz/{unqid}', 'QuizzController@gameOn')->name('quizz');
 Route::get('quizz/{unqid}/result', 'QuizzController@result')->name('quizz.result');
 
+Route::get('top', 'TopController@index')->name('top');
 
 // Authentication Routes
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login')->middleware('guest');
