@@ -43,7 +43,7 @@
                                         </a>
                                         <a href="#" class="btn btn-danger btn-sm"
                                            onclick="removeQuestion('remove-form-{{$question->id}}', event)">
-                                            <i class="fa fa-trash fa-2"></i>
+                                            <i class="fa fa-trash"></i>
                                         </a>
                                         <form
                                                 action="{{ route('questions.destroy', $question) }}"
