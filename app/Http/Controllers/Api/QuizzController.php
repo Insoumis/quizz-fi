@@ -9,8 +9,6 @@ use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
 class QuizzController extends Controller
 {
-    use ValidatesRequests;
-
     public function show($quizzId)
     {
         return Quizz::with('questions', 'questions.question', 'questions.category')
