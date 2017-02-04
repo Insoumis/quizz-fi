@@ -9,8 +9,19 @@
                     Vous devez sélectionner une réponse.
                 </div>
 
-                <question v-for="question in quizz.questions" :question="question"
-                          v-show="currentQuestion == question"></question>
+
+                {{ questionNumber }} / {{ quizz.questions.length }}
+
+                <question
+                        v-for="question in quizz.questions"
+                        v-show="currentQuestion == question"
+                        :key="question"
+
+                        :question="question"
+                        :nbQuestions="quizz.questions.length"
+                        :questionNumber="questionNumber"
+                >
+                </question>
 
                 <div class="row">
 
@@ -44,6 +55,9 @@
 
     export default {
         computed: {
+            questionNumber() {
+                return _.indexOf(this.quizz.questions, this.currentQuestion)+1
+            },
             allIsAnswered() {
                 let nbAnswered = 0
                 for (let i in this.quizz.questions) {

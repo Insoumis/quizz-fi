@@ -2,6 +2,8 @@
     <div class="panel panel-default">
         <div class="panel-body">
 
+            {{ questionNumber }} / {{ nbQuestions }}
+
             <div class="row">
                 <div class="col-md-6">
                     <h2 :style="{color: question.category.color}">{{ question.category.name }}</h2>
@@ -62,7 +64,7 @@
                 $event.target.blur();
             }
         },
-        props: ['question'],
+        props: ['question', 'nbQuestions', 'questionNumber']
     }
 </script>
 

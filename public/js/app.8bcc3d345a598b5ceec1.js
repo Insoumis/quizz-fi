@@ -29245,6 +29245,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = {
     computed: {
@@ -29265,7 +29267,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             $event.target.blur();
         }
     },
-    props: ['question']
+    props: ['question', 'nbQuestions', 'questionNumber']
 };
 
 /***/ }),
@@ -29318,6 +29320,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -29326,6 +29339,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = {
     computed: {
+        questionNumber: function questionNumber() {
+            return __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.indexOf(this.quizz.questions, this.currentQuestion) + 1;
+        },
         allIsAnswered: function allIsAnswered() {
             var nbAnswered = 0;
             for (var i in this.quizz.questions) {
@@ -31984,7 +32000,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "panel panel-default"
   }, [_c('div', {
     staticClass: "panel-body"
-  }, [_c('div', {
+  }, [_vm._v("\n\n        " + _vm._s(_vm.questionNumber) + " / " + _vm._s(_vm.nbQuestions) + "\n\n        "), _c('div', {
     staticClass: "row"
   }, [_c('div', {
     staticClass: "col-md-6"
@@ -32079,7 +32095,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "col-md-8 col-md-offset-2"
   }, [(_vm.showAnswerQuestionText) ? _c('div', {
     staticClass: "alert alert-danger"
-  }, [_vm._v("\n                Vous devez sélectionner une réponse.\n            ")]) : _vm._e(), _vm._v(" "), _vm._l((_vm.quizz.questions), function(question) {
+  }, [_vm._v("\n                Vous devez sélectionner une réponse.\n            ")]) : _vm._e(), _vm._v("\n\n\n            " + _vm._s(_vm.questionNumber) + " / " + _vm._s(_vm.quizz.questions.length) + "\n\n            "), _vm._l((_vm.quizz.questions), function(question) {
     return _c('question', {
       directives: [{
         name: "show",
@@ -32087,8 +32103,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         value: (_vm.currentQuestion == question),
         expression: "currentQuestion == question"
       }],
+      key: question,
       attrs: {
-        "question": question
+        "question": question,
+        "nbQuestions": _vm.quizz.questions.length,
+        "questionNumber": _vm.questionNumber
       }
     })
   }), _vm._v(" "), _c('div', {
