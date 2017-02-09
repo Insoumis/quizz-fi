@@ -2,8 +2,8 @@
 
 namespace Melenquizz;
 
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
@@ -26,4 +26,21 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public static function add($name, $email, $password)
+    {
+        $me = new self;
+        return $me->edit($name, $email, $password);
+    }
+
+    public function edit($name, $email, $password = null)
+    {
+        $this->name = $name;
+        $this->email = $email;
+        if ($password != null) {
+            $this->password = bcrypt($password);
+        }
+
+        return $this;
+    }
 }
