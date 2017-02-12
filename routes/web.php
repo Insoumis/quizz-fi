@@ -31,4 +31,12 @@ Route::group(['prefix' => 'some-secret-zone', 'middleware' => 'auth'], function 
     Route::get('questions/{question}', 'QuestionController@edit')->name('questions.edit');
     Route::put('questions/{question}', 'QuestionController@update')->name('questions.update');
     Route::delete('questions/{question}', 'QuestionController@destroy')->name('questions.destroy');
+
+
+    Route::get('users', 'UserController@index')->name('users.index');
+    Route::get('users/create', 'UserController@create')->name('users.create');
+    Route::post('users', 'UserController@store')->name('users.store');
+    Route::get('users/{user}', 'UserController@edit')->name('users.edit');
+    Route::put('users/{user}', 'UserController@update')->name('users.update');
+    Route::delete('users/{user}', 'UserController@destroy')->name('users.destroy');
 });
