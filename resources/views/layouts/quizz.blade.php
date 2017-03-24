@@ -46,7 +46,7 @@
 
         <div class="container-fluid">
             <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">
-                <div class="fi-createurs col-lg-8 col-lg-offset-2">
+                <div class="fi-createurs">
                     <div class="fi-createurs-border">Site créé à l'initiative de citoyen.ne.s insoumis.es</div>
                 </div>
             </div>
