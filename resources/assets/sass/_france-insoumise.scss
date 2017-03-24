@@ -162,6 +162,7 @@ body {
     background-size: 350px 350px;
     background-position: center center;
     background-repeat: no-repeat;
+    box-shadow: hsl(0, 0%, 25%) 0px 0px 20px 5px;
 
     color: $white;
     border: none;
@@ -223,6 +224,7 @@ body {
     background-size: 350px 350px;
     background-position: center center;
     background-repeat: no-repeat;
+    box-shadow: hsl(0, 0%, 25%) 0px 0px 20px 5px;
 
     color: $white;
     border: none;
@@ -286,6 +288,7 @@ body {
         .fi-description {
             margin-bottom: 40px;
             font-style: italic;
+            line-height: 1.3em;
         }
 
         .fi-question-theme {
