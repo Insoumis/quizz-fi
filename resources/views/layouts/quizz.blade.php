@@ -9,6 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Suis-je Insoumis ?</title>
+    <meta name="description" content="Découvrez grâce à un tirage aléatoire les propositions du programme de la France Insoumise, représentée par son candidat Jean-Luc MÉLENCHON.">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
@@ -16,6 +17,7 @@
     <meta property="og:title" content="Suis-je Insoumis ?" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://suisjeinsoumis.fr/" />
+    <meta property="og:description" content="Découvrez grâce à un tirage aléatoire les propositions du programme de la France Insoumise, représentée par son candidat Jean-Luc MÉLENCHON." />
 
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/ico/apple-touch-icon-144x144.png" />
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/ico/apple-touch-icon-152x152.png" />
