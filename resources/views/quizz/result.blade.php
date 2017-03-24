@@ -4,10 +4,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 fi-accueil-bloc">
+
                 <div class="fi-top-menu">
-                    <a class="fi-facebook" href=""></a>
-                    <a class="fi-twitter" href=""></a>
-                    <a class="fi-youtube" href=""></a>
+                    @include('components.social_links_top')
                     <a class="btn btn-info btn-sm fi-top-propositions" href="/top">
                         <i class="fa fa-trophy"></i>
                         Top des propositions
@@ -60,11 +59,11 @@
                         <div class="col-lg-10 col-lg-offset-1">
                             <p>
                                 <strong>Partage ton résultat&nbsp;:</strong>
-                                <a href="http://www.facebook.com/sharer/sharer.php?u={{ URL::full() }}"><i
+                                <a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u={{ URL::full() }}"><i
                                             class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="http://twitter.com/intent/tweet?status={{ urlencode('Mon taux de compatibilité avec le programme de l\'Avenir en commun est de '.round($avgGlobal).'% : ' . URL::full()) }}"><i
+                                <a target="_blank" href="http://twitter.com/intent/tweet?status={{ urlencode('Mon taux de compatibilité avec le programme de l\'Avenir en commun est de '.round($avgGlobal).'% : ' . URL::full()) }}"><i
                                             class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="https://plus.google.com/share?url={{ URL::full() }}"><i class="fa fa-google-plus"
+                                <a target="_blank" href="https://plus.google.com/share?url={{ URL::full() }}"><i class="fa fa-google-plus"
                                                                                                  aria-hidden="true"></i></a>
                             </p>
                         </div>

@@ -24,43 +24,46 @@
     <div id="app">
         @yield('content')
 
-        <div class="container-fluid">  
+        <div class="container-fluid">
             <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">
                 <div class="fi-createurs col-lg-8 col-lg-offset-2">
                     <div class="fi-createurs-border">Site créé à l'initiative<br/>de citoyen.ne.s insoumis.es</div>
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
-            <div class="fi-footer col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                    <p class="fi-footer-titre">Je m'implique&nbsp;:</p>
-                    <p><a href="">J'agis</a></p>
-                    <p><a href="">Je donne</a></p>
-                    <p><a href="">Les parrainages</a></p>
+        <div class="container-fluid" style="margin-top: 30px; margin-bottom: 80px; ">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="row bottom-margin" style="background: rgba(255,255,255,0.85); padding: 1em;">
+                <div class="col-sm-3"><strong>Je m’implique&nbsp;:</strong><br>
+                    <a target="_blank" href="http://www.jlm2017.fr/agir">J’agis</a><br>
+                    <a target="_blank" href="http://www.jlm2017.fr/donner">Je donne</a><br>
+                    <a target="_blank" href="http://www.jlm2017.fr/inscription_detail">J’en dis plus sur moi</a><br>
+                    <a target="_blank" href="http://www.jlm2017.fr/signup">Je crée un compte</a><br>
+                    <a target="_blank" href="http://www.jlm2017.fr/parrainages">Les parrainages</a>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                    <p class="fi-footer-titre">Réseaux sociaux&nbsp;:</p>
-                    <p><a href="">Facebook</a></p>
-                    <p><a href="">Twitter</a></p>
-                    <p><a href="">YouTube</a></p>
+
+                <div class="col-sm-3"><strong>Réseaux sociaux&nbsp;:</strong><br>
+                    <a target="_blank" href="https://www.facebook.com/JLMelenchon/">Facebook</a><br>
+                    <a target="_blank" href="https://twitter.com/JLMelenchon">Twitter</a><br>
+                    <a target="_blank" href="https://www.youtube.com/user/PlaceauPeuple">Youtube</a><br>
+                    <a target="_blank" href="http://plus.google.com/+JLMelenchon/">Google+</a><br>
+                    <a target="_blank" href="http://instagram.com/jlmelenchon/">Instagram</a><br>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                    <p class="fi-footer-titre">Groupes d'appui&nbsp;:</p>
-                    <p><a href="">La carte des groupes</a></p>
-                    <p><a href="">L'actu des groupes</a></p>
-                    <p><a href="">Créer ou rejoindre un groupe</a></p>
+
+                <div class="col-sm-3"><strong>Groupes d’appui&nbsp;:</strong><br>
+                    <a target="_blank" href="http://www.jlm2017.fr/groupes_appui">La carte des groupes</a><br>
+                    <a target="_blank" href="http://www.jlm2017.fr/actualites-groupes-appui">L'actu des groupes d'appui</a><br>
+                    <a target="_blank" href="http://www.jlm2017.fr/creer_ou_rejoindre_un_groupe_d_appui">Créer ou rejoindre un groupe</a>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                    <p class="fi-footer-titre">Événements&nbsp;:</p>
-                    <p><a href="">L'agenda de JLM</a></p>
-                    <p><a href="">Événements locaux</a></p>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fi-footer-jlm2017">
-                    <a href="http://www.jlm2017.fr">jlm2017.fr</a>
+
+                <div class="col-sm-3"><strong>Evènements&nbsp;:</strong><br>
+                    <a target="_blank" href="http://www.jlm2017.fr/agenda_melenchon">L’agenda de JLM</a><br>
+                    <a target="_blank" href="http://www.jlm2017.fr/evenements_locaux">Evènements locaux</a><br>
                 </div>
             </div>
+            </div>
         </div>
+
     </div>
     <!-- Scripts -->
     <script src="{{ mix("/js/app.js") }}"></script>

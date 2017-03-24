@@ -5,21 +5,13 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 fi-accueil-bloc">
                 <div class="fi-top-menu">
-                    <a class="fi-facebook" href=""></a>
-                    <a class="fi-twitter" href=""></a>
-                    <a class="fi-youtube" href=""></a>
+                    @include('components.social_links_top')
                     <a class="btn btn-info btn-sm fi-top-propositions" href="{{ route('top') }}">
                         <i class="fa fa-trophy"></i>
                         Top des propositions
                     </a>
                 </div>
                 <div class="panel panel-default fi-boite-accueil">
-<!--
-                    <div class="panel-heading fi-accueil-titre">
-                        <strong>Suis-je<br/>Insoumis.fr</strong>
-                        <div class="clearfix"></div>
-                    </div>
--->
                     <div class="panel-body">
                         <div class="fi-accueil-titre">
                             <strong>Suis-je<br/>Insoumis.fr</strong>
@@ -71,20 +63,6 @@
                                 </div>
                             </div>
                         </form>
-
-<!--
-                        <p>
-                            <a href="http://www.facebook.com/sharer/sharer.php?u={{ URL::full() }}">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                            </a>
-                            <a href="http://twitter.com/intent/tweet?status={{ urlencode('Venez participer au quizz sur la France insoumise et son programme l\'Avenir en commun : ' . URL::full()) }}">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                            </a>
-                            <a href="https://plus.google.com/share?url={{ URL::full() }}">
-                                <i class="fa fa-google-plus" aria-hidden="true"></i>
-                            </a>
-                        </p>
--->
                     </div>
                 </div>
             </div>
