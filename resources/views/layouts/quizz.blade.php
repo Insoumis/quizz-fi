@@ -78,7 +78,7 @@
 
                 <div class="col-sm-3"><strong>Evènements&nbsp;:</strong><br>
                     <a target="_blank" href="http://www.jlm2017.fr/agenda_melenchon">L’agenda de JLM</a><br>
-                    <a target="_blank" href="http://www.jlm2017.fr/evenements_locaux">Evènements locaux</a><br>
+                    <a target="_blank" href="http://www.jlm2017.fr/evenements_locaux">Événements locaux</a><br>
                 </div>
             </div>
             </div>
