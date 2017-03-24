@@ -3,6 +3,9 @@
 namespace Melenquizz\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Melenquizz\Question;
+use Melenquizz\Quizz;
+use Melenquizz\QuizzQuestion;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $totalQuestions = Question::count();
+        $totalQuizz = Quizz::count();
+        $totalQuizzAnswered = Quizz::where('completed', true)->count();
+        $totalAnswer = QuizzQuestion::whereNotNull('answer')->count();
+
+        return view('home', compact('totalQuestions', 'totalQuizz', 'totalQuizzAnswered', 'totalAnswer'));
     }
 }
