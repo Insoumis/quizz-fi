@@ -8,7 +8,25 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name') }}</title>
+    <title>Suis-je Insoumis ?</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <meta property="og:title" content="Suis-je Insoumis ?" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://suisjeinsoumis.fr/" />
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/ico/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/ico/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="/images/ico/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/ico/favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content="Suis-je Insoumis ?"/>
+    <meta name="msapplication-TileColor" content="#0098B6" />
+    <meta name="msapplication-TileImage" content="/images/ico/mstile-144x144.png" />
+    <meta name="theme-color" content="#0098b6">
+    <link rel="icon" href="/images/ico/favicon.ico">
+
 
     <!-- Styles -->
     <link href="{{ mix("/css/app.css") }}" rel="stylesheet">
