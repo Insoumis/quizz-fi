@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-lg-7 col-md-6 col-sm-6 col-xs-8">
                         <div class="fi-question-theme">
-                            <img :src="question.category.slug"></img>
+                            <img :src="'/images/themes/'+question.category.slug+'.png'"></img>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
