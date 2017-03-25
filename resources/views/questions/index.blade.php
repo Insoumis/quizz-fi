@@ -22,12 +22,20 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="panel-body">
+
+                        <label>
+                            <input class="js-correction-mode" type="checkbox" {{ request('correction') ? 'checked' : ''  }}> Mode relecture ?
+                        </label>
+
                         <table class="table table-striped table-responsive">
                             <thead>
                             <tr>
                                 <th>#</th>
                                 <th>Categorie</th>
-                                <th>Question</th>
+                                <th>Proposition</th>
+                                @if (request('correction'))
+                                    <th>Description</th>
+                                @endif
                                 <th>Lien LAEC.fr</th>
                                 <th></th>
                             </tr>
@@ -37,7 +45,12 @@
                                 <tr>
                                     <td>{{ $question->id }}</td>
                                     <td>{{ $question->category->name }}</td>
-                                    <td>{{ str_limit($question->proposition, 120) }}</td>
+                                    @if (request('correction'))
+                                        <td>{!! nl2br($question->proposition) !!}</td>
+                                        <td>{!! nl2br($question->description) !!}</td>
+                                    @else
+                                        <td>{{ str_limit($question->proposition, 120) }}</td>
+                                    @endif
                                     <td>
                                         @if($question->laec_url)
                                             <a href="{{ $question->laec_url }}"><i class="fa fa-eye"></i></a>
@@ -76,6 +89,8 @@
 
 @push('js')
 <script>
+    const currentUrl = '{{ URL::current() }}';
+
     const removeQuestion = function(formId, ev) {
         ev.preventDefault();
         const form = document.getElementById(formId);
@@ -83,5 +98,9 @@
             form.submit();
         }
     }
+
+    $('.js-correction-mode').change(function() {
+        window.location.href = currentUrl + '?correction=' + (this.checked ? '1' : '0');
+    });
 </script>
 @endpush
