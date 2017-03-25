@@ -177,7 +177,8 @@ return [
         Melenquizz\Providers\EventServiceProvider::class,
         Melenquizz\Providers\RouteServiceProvider::class,
 
-        Barryvdh\Debugbar\ServiceProvider::class
+        Barryvdh\Debugbar\ServiceProvider::class,
+        Spatie\Backup\BackupServiceProvider::class,
     ],
 
     /*
