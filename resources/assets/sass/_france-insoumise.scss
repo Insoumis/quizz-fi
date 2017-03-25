@@ -286,12 +286,22 @@ body {
     font-size: 30px;
     font-weight: 500;
     margin-top: 30px;
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
   }
 
   .fi-description {
     margin-bottom: 40px;
     font-style: italic;
     line-height: 1.3em;
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
   }
 
   .fi-question-theme {

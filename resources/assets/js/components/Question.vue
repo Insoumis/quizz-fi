@@ -66,17 +66,20 @@
 </template>
 
 <script>
+
+    import {markdown} from 'markdown';
+
     export default {
         computed: {
             formattedProposition() {
-                return (this.question.question.proposition + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + '<br />' + '$2')
+                return markdown.toHTML(this.question.question.proposition + '')
             },
             formatedDescription() {
                 if (this.question.question.description == null || this.question.question.description == "") {
                     return ""
                 }
 
-                return (this.question.question.description + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + '<br />' + '$2')
+                return markdown.toHTML(this.question.question.description + '')
             },
         },
         methods: {
