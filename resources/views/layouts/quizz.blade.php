@@ -60,15 +60,23 @@
     <div class="container-fluid" style="margin-top: 30px; margin-bottom: 80px; ">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="row bottom-margin" style="background: rgba(255,255,255,0.85); padding: 1em;">
-                <div class="col-sm-3"><strong>Je m’implique&nbsp;:</strong><br>
+
+                <div class="col-sm-2"><strong>Sites du Discord&nbsp;:</strong><br>
+                    <a target="_blank" href="https://laec.fr/">Laec.fr</a><br>
+                    <a target="_blank" href="http://melenchonouimais.fr/">Mélenchon oui, mais...</a><br>
+                    <a target="_blank" href="http://insoumis.online/">Le portail Insoumis</a><br>
+                    <a target="_blank" href="https://melenshack.fr/">Melenshack</a><br>
+                </div>
+
+
+                <div class="col-sm-2"><strong>Je m’implique&nbsp;:</strong><br>
                     <a target="_blank" href="http://www.jlm2017.fr/agir">J’agis</a><br>
                     <a target="_blank" href="http://www.jlm2017.fr/donner">Je donne</a><br>
                     <a target="_blank" href="http://www.jlm2017.fr/inscription_detail">J’en dis plus sur moi</a><br>
                     <a target="_blank" href="http://www.jlm2017.fr/signup">Je crée un compte</a><br>
-                    <a target="_blank" href="http://www.jlm2017.fr/parrainages">Les parrainages</a>
                 </div>
 
-                <div class="col-sm-3"><strong>Réseaux sociaux&nbsp;:</strong><br>
+                <div class="col-sm-2"><strong>Réseaux sociaux&nbsp;:</strong><br>
                     <a target="_blank" href="https://www.facebook.com/JLMelenchon/">Facebook</a><br>
                     <a target="_blank" href="https://twitter.com/JLMelenchon">Twitter</a><br>
                     <a target="_blank" href="https://www.youtube.com/user/PlaceauPeuple">Youtube</a><br>
@@ -76,7 +84,7 @@
                     <a target="_blank" href="http://instagram.com/jlmelenchon/">Instagram</a><br>
                 </div>
 
-                <div class="col-sm-3"><strong>Groupes d’appui&nbsp;:</strong><br>
+                <div class="col-sm-2"><strong>Groupes d’appui&nbsp;:</strong><br>
                     <a target="_blank" href="http://www.jlm2017.fr/groupes_appui">La carte des groupes</a><br>
                     <a target="_blank" href="http://www.jlm2017.fr/actualites-groupes-appui">L'actu des groupes
                         d'appui</a><br>
@@ -84,10 +92,17 @@
                         rejoindre un groupe</a>
                 </div>
 
-                <div class="col-sm-3"><strong>Evènements&nbsp;:</strong><br>
+                <div class="col-sm-2"><strong>Evènements&nbsp;:</strong><br>
                     <a target="_blank" href="http://www.jlm2017.fr/agenda_melenchon">L’agenda de JLM</a><br>
                     <a target="_blank" href="http://www.jlm2017.fr/evenements_locaux">Événements locaux</a><br>
                 </div>
+
+
+                <div class="col-sm-2"><strong>Contact&nbsp;:</strong><br>
+                    <a target="_blank" href="mailto:contact@suisjeinsoumis.fr">contact@suisjeinsoumis.fr</a><br>
+                </div>
+
+
             </div>
         </div>
     </div>
