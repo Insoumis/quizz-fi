@@ -42,10 +42,6 @@
                         @endforeach
                     </div>
                 </div>
-
-                <a href="{{ route('index') }}" class="btn btn-info"><i class="fa fa-home"></i> Retour à
-                    l'accueil</a>
-
             </div>
         </div>
     </div>
