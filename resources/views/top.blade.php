@@ -30,7 +30,7 @@
                                     {{ $question->proposition }}
                                 </div>
                                 <div class="col-md-3">
-                                    {{ round($result->pct, 2) }}% <i class="fa fa-info-circle" data-toggle="tooltip" title="Cette proposition a été jouée {{ $result->total }} fois"></i>
+                                    {{ round($result->pct, 2) }}% <i class="fa fa-info-circle" data-toggle="tooltip" title="Score moyen sur une total de {{ $result->total }} affichages"></i>
                                 </div>
                                 <div class="col-md-1">
                                   <a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u={{ urlencode($urlToQuestion) }}"><i
