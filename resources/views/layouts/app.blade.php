@@ -77,7 +77,9 @@
             </div>
         </nav>
 
+        <div class="backend">
         @yield('content')
+        </div>
     </div>
 
     <!-- Scripts -->

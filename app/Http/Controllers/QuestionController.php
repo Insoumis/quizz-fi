@@ -44,7 +44,8 @@ class QuestionController extends Controller
             $request->get('category_id'),
             $request->get('proposition'),
             $request->get('description'),
-            $request->get('page_no')
+            $request->get('page_no'),
+            $request->get('laec_url')
         );
 
         $question->save();
@@ -77,7 +78,8 @@ class QuestionController extends Controller
             $request->get('category_id'),
             $request->get('proposition'),
             $request->get('description'),
-            $request->get('page_no')
+            $request->get('page_no'),
+            $request->get('laec_url')
         );
         $question->save();
 

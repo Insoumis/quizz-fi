@@ -31,6 +31,11 @@
                                 <textarea name="description" id="description" class="form-control" rows="5">{{ old('description') }}</textarea>
                             </div>
 
+                            <div class="form-group {{ $errors->has('laec_url') ? 'has-error' : '' }}">
+                                <label for="laec_url" class="control-label">Lien laec.fr</label>
+                                <input name="laec_url" id="laec_url" type="text" class="form-control" value="{{ old('laec_url') }}"/>
+                            </div>
+
                             <div class="form-group {{ $errors->has('page_no') ? 'has-error' : '' }}">
                                 <label for="page_no" class="control-label">Page n°</label>
                                 <input step="1" name="page_no" id="page_no" type="number" class="form-control" value="{{ old('page_no') }}"/>

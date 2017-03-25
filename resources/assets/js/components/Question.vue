@@ -3,18 +3,25 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="row">
-                    <div class="col-lg-7 col-md-6 col-sm-6 col-xs-8">
+                    <div class="col-lg-5 col-sm-5 col-xs-8">
                         <div class="fi-question-theme">
-                            <img :src="'/images/themes/'+question.category.slug+'.png'"></img>
+                            <img class="img-responsive" :src="'/images/themes/'+question.category.slug+'.png'" />
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
+                    <div class="col-lg-3 col-sm-3 col-xs-4">
                         <div class="fi-question-numerotation text-center">
                             <span class="fi-numero-question-label"><strong>Question</strong></span><br />
                             <span class="fi-numero-question">{{ questionNumber }}/{{ nbQuestions }}</span>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-3 col-sm-3 hidden-xs">
+                    <div class="col-lg-2 col-sm-2 hidden-xs fi-laec-url">
+                        <template v-if="!!question.question.laec_url">
+                            <a target="_blank" :href="question.question.laec_url" >
+                                <img src="/images/livre-phi-blanc-transparence.png" data-toggle="tooltip" title="Voir la proposition sur laec.fr" />
+                            </a>
+                        </template>
+                    </div>
+                    <div class="col-lg-2 col-sm-2 hidden-xs">
                         <div class="fi-question-page">
                             <div class="fi-titre-programme">L'Avenir<br />en commun</div>
                             <div class="fi-page-programme">
@@ -78,7 +85,7 @@
                 $event.target.blur();
             }
         },
-        props: ['question', 'nbQuestions', 'questionNumber']
+        props: ['question', 'nbQuestions', 'questionNumber'],
     }
 </script>
 

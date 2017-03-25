@@ -28,6 +28,7 @@
                                 <th>#</th>
                                 <th>Categorie</th>
                                 <th>Question</th>
+                                <th>Lien LAEC.fr</th>
                                 <th></th>
                             </tr>
                             </thead>
@@ -37,7 +38,14 @@
                                     <td>{{ $question->id }}</td>
                                     <td>{{ $question->category->name }}</td>
                                     <td>{{ str_limit($question->proposition, 120) }}</td>
-                                    <td class="text-right">
+                                    <td>
+                                        @if($question->laec_url)
+                                            <a href="{{ $question->laec_url }}"><i class="fa fa-eye"></i></a>
+                                        @else
+                                           <i class="fa fa-eye-slash"></i>
+                                        @endif
+                                    </td>
+                                    <td class="text-right" width="90">
                                         <a href="{{ route('questions.edit', $question) }}" class="btn btn-info btn-sm">
                                             <i class="fa fa-pencil"></i>
                                         </a>

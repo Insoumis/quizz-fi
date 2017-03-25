@@ -13,418 +13,426 @@ $white: white;
 .col-sm-5ths,
 .col-md-5ths,
 .col-lg-5ths {
-    position: relative;
-    min-height: 1px;
-    padding-right: 10px;
-    padding-left: 10px;
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .col-xs-5ths {
-    width: 20%;
-    float: left;
+  width: 20%;
+  float: left;
 }
 
 @media (min-width: 768px) {
-    .col-sm-5ths {
-        width: 20%;
-        float: left;
-    }
+  .col-sm-5ths {
+    width: 20%;
+    float: left;
+  }
 }
 
 @media (min-width: 992px) {
-    .col-md-5ths {
-        width: 20%;
-        float: left;
-    }
+  .col-md-5ths {
+    width: 20%;
+    float: left;
+  }
 }
 
 @media (min-width: 1200px) {
-    .col-lg-5ths {
-        width: 20%;
-        float: left;
-    }
+  .col-lg-5ths {
+    width: 20%;
+    float: left;
+  }
 }
 
 /* ------ */
 /* Global */
 /* ------ */
 body {
-    background-image: url("/images/fondHD.jpg");
-    background-position: center -150px;
-    background-repeat: no-repeat;
-    background-size: 144% auto;
-    background-attachment: fixed;
-    font-family: Roboto, Arial;
+  background-image: url("/images/fondHD.jpg");
+  background-position: center -150px;
+  background-repeat: no-repeat;
+  background-size: 144% auto;
+  background-attachment: fixed;
+  font-family: Roboto, Arial;
 }
 
 .fi-accueil-bloc {
-    padding-top: 70px;
+  padding-top: 70px;
 }
 
 .fi-top-menu {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+  height: 50px;
+
+  .fi-top-propositions {
+    background-color: $fi-rouge;
+    border: none;
+    border-radius: 0px;
+    padding: 2px 20px 2px 20px;
+    font-size: 30px;
+    display: inline-block;
+    float: right;
     height: 50px;
 
-    .fi-top-propositions {
-        background-color: $fi-rouge;
-        border: none;
-        border-radius: 0px;
-        padding: 2px 20px 2px 20px;
-        font-size: 30px;
-        display: inline-block;
-        float: right;
-        height: 50px;
-
-        &:hover {
-            background-color: $fi-rouge-darker;
-        }
+    &:hover {
+      background-color: $fi-rouge-darker;
     }
+  }
 
-    .fi-facebook, .fi-twitter, .fi-youtube {
-        background-image: url(/images/icon-reseau-social-1.png);
-        background-size: 50px 50px;
-        display: inline-block;
-        float: left;
-        height: 50px;
-        width: 50px;
-        margin-right: 15px;
-    }
+  .fi-facebook, .fi-twitter, .fi-youtube {
+    background-image: url(/images/icon-reseau-social-1.png);
+    background-size: 50px 50px;
+    display: inline-block;
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin-right: 15px;
+  }
 
-    .fi-twitter {
-        background-image: url(/images/icon-reseau-social-2.png);
-    }
+  .fi-twitter {
+    background-image: url(/images/icon-reseau-social-2.png);
+  }
 
-    .fi-youtube {
-        background-image: url(/images/icon-reseau-social-3.png);
-        width: 70px;
-        background-size: 70px;
-    }
+  .fi-youtube {
+    background-image: url(/images/icon-reseau-social-3.png);
+    width: 70px;
+    background-size: 70px;
+  }
 }
 
 /* ------------ */
 /* Pied de page */
 /* ------------ */
 .fi-createurs {
-    background-color: $fi-bleu;
-    padding: 5px;
-    color: white;
-    text-align: center;
-    font: 200 20px "Roboto";
-    margin-top: 80px;
+  background-color: $fi-bleu;
+  padding: 5px;
+  color: white;
+  text-align: center;
+  font: 200 20px "Roboto";
+  margin-top: 80px;
 
-    .fi-createurs-border {
-        border: 1px solid white;
-        padding: 25px;
-        letter-spacing: -1px;
-    }
+  .fi-createurs-border {
+    border: 1px solid white;
+    padding: 25px;
+    letter-spacing: -1px;
+  }
 }
 
 .fi-footer {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    margin-top: 80px;
-    margin-bottom: 80px;
-    padding: 10px 0px 10px 0px;
-    letter-spacing: -1px;
-    font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding: 10px 0px 10px 0px;
+  letter-spacing: -1px;
+  font-size: 18px;
 
-    .fi-footer-titre {
-        font-weight: bold;
-        color: #777;
-    }
+  .fi-footer-titre {
+    font-weight: bold;
+    color: #777;
+  }
 
-    .fi-footer-jlm2017 {
-        text-align: center;
-        letter-spacing: 0px;
-        margin-top: 20px;
-
-        a {
-            font-weight: bold;
-            font-size: 30px;
-        }
-    }
+  .fi-footer-jlm2017 {
+    text-align: center;
+    letter-spacing: 0px;
+    margin-top: 20px;
 
     a {
-        color: $fi-bleu;
-        font: 200 20px "Roboto";
+      font-weight: bold;
+      font-size: 30px;
     }
+  }
 
-    p {
-        margin: 0;
-    }
+  a {
+    color: $fi-bleu;
+    font: 200 20px "Roboto";
+  }
+
+  p {
+    margin: 0;
+  }
 }
-
 
 /* Accueil */
 .fi-boite-accueil {
-    background-color: $fi-bleu;
-    background-image: url(/images/phiHD.png);
-    background-size: 350px 350px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    box-shadow: hsl(0, 0%, 25%) 0px 0px 20px 5px;
+  background-color: $fi-bleu;
+  background-image: url(/images/phiHD.png);
+  background-size: 350px 350px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: hsl(0, 0%, 25%) 0px 0px 20px 5px;
 
-    color: $white;
-    border: none;
-    text-align: center;
-    border-radius: 10px;
-    font-size: 20px;
+  color: $white;
+  border: none;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 20px;
 
-    .panel-body {
-        padding: 20px 15px 30px 15px;
+  .panel-body {
+    padding: 20px 15px 30px 15px;
+  }
+
+  button {
+    background-color: $fi-rouge;
+    font-size: 15px;
+    min-height: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 220px;
+    border-radius: 0px;
+
+    &:hover {
+      background-color: $fi-rouge-darker;
     }
 
-    button {
-        background-color: $fi-rouge;
-        font-size: 15px;
-        min-height: 110px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 220px;
-        border-radius: 0px;
-
-        &:hover {
-            background-color: $fi-rouge-darker;
-        }
-
-        .fi-bouton-titre {
-            font-size: 20px;
-        }
-
-        .fi-icon-timer {
-            float: left;
-            background-image: url("/images/timer.png");
-            background-size: 40px 40px;
-            width: 40px;
-            height: 40px;
-            margin: 8px 0 8px 0;
-        }
-
-        .fi-texte-bouton {
-            float: right;
-        }
+    .fi-bouton-titre {
+      font-size: 20px;
     }
 
-    .fi-accueil-etonnement {
-        font-size: 25px;
-        margin-top: 20px;
-        margin-bottom: 40px;
+    .fi-icon-timer {
+      float: left;
+      background-image: url("/images/timer.png");
+      background-size: 40px 40px;
+      width: 40px;
+      height: 40px;
+      margin: 8px 0 8px 0;
     }
 
-    .fi-accueil-titre {
-        font-size: 60px;
-        line-height: 70px;
+    .fi-texte-bouton {
+      float: right;
     }
+  }
+
+  .fi-accueil-etonnement {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .fi-accueil-titre {
+    font-size: 60px;
+    line-height: 70px;
+  }
 }
 
 /* questions */
 .fi-boite-question {
-    background-color: $fi-bleu;
-    background-image: url(/images/phiHD.png);
-    background-size: 350px 350px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    box-shadow: hsl(0, 0%, 25%) 0px 0px 20px 5px;
+  background-color: $fi-bleu;
+  background-image: url(/images/phiHD.png);
+  background-size: 350px 350px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: hsl(0, 0%, 25%) 0px 0px 20px 5px;
 
-    color: $white;
-    border: none;
-    border-radius: 10px;
-    font-size: 20px;
+  color: $white;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
 
-    .panel-body {
-        padding: 40px;
+  .panel-body {
+    padding: 40px;
+  }
+
+  .fi-proposition-votes {
+
+    button.fi-note {
+      background-color: $fi-rouge;
+      font-size: 15px;
+      min-height: 90px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      min-width: 100px;
+      font-size: 20px;
+      color: $white;
+      border: 0;
+      border-radius: 0px;
+      font-weight: 500;
+
+      &:hover, &:active,
+      &:active:hover, &:active:focus, &.focus:active,
+      &.active:hover, &.active:focus, &.active.focus,
+      .open > &.dropdown-toggle:hover,
+      .open > &.dropdown-toggle:focus,
+      .open > &.dropdown-toggle.focus {
+        background-color: $fi-rouge-darker;
+        color: $white;
+      }
+
+      &.btn-success {
+        background-color: $fi-rouge-darkest;
+
+        &:active:hover, &:active:focus, &.focus:active,
+        &.active:hover, &.active:focus, &.active.focus,
+        .open > &.dropdown-toggle:hover,
+        .open > &.dropdown-toggle:focus,
+        .open > &.dropdown-toggle.focus {
+          background-color: $fi-rouge-darkest;
+        }
+      }
     }
+  }
 
-    .fi-proposition-votes {
+  .fi-laec-url {
+      @extend .text-center;
 
-
-        button.fi-note {
-            background-color: $fi-rouge;
-            font-size: 15px;
-            min-height: 90px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 100%;
-            min-width: 100px;
-            font-size: 20px;
-            color: $white;
-            border: 0;
-            border-radius: 0px;
-            font-weight: 500;
-
-            &:hover, &:active,
-            &:active:hover, &:active:focus, &.focus:active,
-            &.active:hover, &.active:focus, &.active.focus,
-            .open > &.dropdown-toggle:hover,
-            .open > &.dropdown-toggle:focus,
-            .open > &.dropdown-toggle.focus {
-                background-color: $fi-rouge-darker;
-                color: $white;
-            }
-
-            &.btn-success {
-                background-color: $fi-rouge-darkest;
-
-                &:active:hover, &:active:focus, &.focus:active,
-                &.active:hover, &.active:focus, &.active.focus,
-                .open > &.dropdown-toggle:hover,
-                .open > &.dropdown-toggle:focus,
-                .open > &.dropdown-toggle.focus {
-                    background-color: $fi-rouge-darkest;
-                }
-            }
-        }
-    }
-
-/*    .fi-proposition {
-        padding: 20px;*/
-
-        .fi-proposition-texte {
-            font-size: 30px;
-            font-weight: 500;
-            margin-top: 30px;
-        }
-
-        .fi-description {
-            margin-bottom: 40px;
-            font-style: italic;
-            line-height: 1.3em;
-        }
-
-        .fi-question-theme {
-            /*border-radius: 10px;*/
-            height: 70px;
-            /*line-height: 70px;*/
-/*            font-size: 30px;
-            font-color: $white;
-            padding: 5px;*/
-
-            img {
-                height: 100%;
-            }
-        }
-
-        .fi-question-numerotation {
-            background-color: $fi-rouge;
-            border-radius: 10px;
-            height: 70px;
-            width: 140px;
-
-            .fi-numero-question-label {
-                font-weight: bold;
-                font-size: 25px;
-            }
-
-            .fi-numero-question {
-                font-weight: 200;
-            }
-        }
-    /*}*/
-
-
-    .fi-passage-question {
-        margin-top: 60px;
-        padding: 0px;
-
-        .btn-primary.disabled:hover, .btn-primary.disabled:focus,
-        .btn-primary.disabled.focus, .btn-primary[disabled]:hover,
-        .btn-primary[disabled]:focus, .btn-primary.focus[disabled],
-        fieldset[disabled] .btn-primary:hover,
-        fieldset[disabled] .btn-primary:focus,
-        fieldset[disabled] .btn-primary.focus,
-        .btn-primary,
-        .btn-success.disabled:hover, .btn-success.disabled:focus,
-        .btn-success.disabled.focus, .btn-success[disabled]:hover,
-        .btn-success[disabled]:focus, .btn-success.focus[disabled],
-        fieldset[disabled] .btn-success:hover,
-        fieldset[disabled] .btn-success:focus,
-        fieldset[disabled] .btn-success.focus,
-        .btn-success {
-            background-color: $fi-bleu;
-            border: none;
-            font-size: 22px;
-            transition: all 0.3s ease-in-out;
-            padding: 0px;
-        }
-
-        .btn-primary:hover, .btn-success:hover {
-            transform: scale(1.05, 1.05);
-        }
-    }
-
-    .fi-question-page {
-        background-image: url('/images/laec-livre.png');
+      img {
         height: 70px;
-        background-position: center center;
-        border-radius: 10px;
-        text-align: center;
-        width: 110px;
+      }
+  }
 
-        .fi-titre-programme {
-            padding-top: 6px;
-            color: $fi-rouge;
-            font-size: 18px;
-            font-weight: bold;
-            line-height: 15px;
-        }
+  .fi-proposition-texte {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 30px;
+  }
 
-        .fi-page-programme {
-            color: $fi-bleu;
-            font-weight: 200;
-        }
+  .fi-description {
+    margin-bottom: 40px;
+    font-style: italic;
+    line-height: 1.3em;
+  }
+
+  .fi-question-theme {
+    /*border-radius: 10px;*/
+    height: 70px;
+    /*line-height: 70px;*/
+    /*            font-size: 30px;
+                font-color: $white;
+                padding: 5px;*/
+
+    img {
+      height: 100%;
     }
+  }
+
+  .fi-question-numerotation {
+    background-color: $fi-rouge;
+    border-radius: 10px;
+    height: 70px;
+    width: 140px;
+
+    .fi-numero-question-label {
+      font-weight: bold;
+      font-size: 25px;
+    }
+
+    .fi-numero-question {
+      font-weight: 200;
+    }
+  }
+  /*}*/
+
+  .fi-passage-question {
+    margin-top: 60px;
+    padding: 0px;
+
+    .btn-primary.disabled:hover, .btn-primary.disabled:focus,
+    .btn-primary.disabled.focus, .btn-primary[disabled]:hover,
+    .btn-primary[disabled]:focus, .btn-primary.focus[disabled],
+    fieldset[disabled] .btn-primary:hover,
+    fieldset[disabled] .btn-primary:focus,
+    fieldset[disabled] .btn-primary.focus,
+    .btn-primary,
+    .btn-success.disabled:hover, .btn-success.disabled:focus,
+    .btn-success.disabled.focus, .btn-success[disabled]:hover,
+    .btn-success[disabled]:focus, .btn-success.focus[disabled],
+    fieldset[disabled] .btn-success:hover,
+    fieldset[disabled] .btn-success:focus,
+    fieldset[disabled] .btn-success.focus,
+    .btn-success {
+      background-color: $fi-bleu;
+      border: none;
+      font-size: 22px;
+      transition: all 0.3s ease-in-out;
+      padding: 0px;
+    }
+
+    .btn-primary:hover, .btn-success:hover {
+      transform: scale(1.05, 1.05);
+    }
+  }
+
+  .fi-question-page {
+    background-image: url('/images/laec-livre.png');
+    height: 70px;
+    background-position: center center;
+    border-radius: 10px;
+    text-align: center;
+    width: 110px;
+
+    .fi-titre-programme {
+      padding-top: 6px;
+      color: $fi-rouge;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 15px;
+    }
+
+    .fi-page-programme {
+      color: $fi-bleu;
+      font-weight: 200;
+    }
+  }
 }
 
 i {
-    color: white;
-    
-    &:hover {
-        color: grey;
-    }
+  color: white;
+
+  &:hover {
+    color: grey;
+  }
 }
 
 .progress {
-    border: 1px solid rgba(255, 255, 255, 1);
-    border-radius: 0px;
-    height: 50px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 0px;
+  height: 50px;
 }
 
 .progress-striped.progress-bar-custom {
-    background-color: $fi-rouge;
-    background-image: -webkit-gradient(linear,0 100%,100% 0,color-stop(0.25,rgba(255, 255, 255, 0.05),color-stop(0.25,transparent),color-stop(0.5,transparent),color-stop(0.5,rgba(255, 255, 255, 0.05)),color-stop(0.75,rgba(255, 255, 255, 0.05)),color-stop(0.75,transparent),to(transparent)));
-    background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, 0.05) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, 0.05) 50%,rgba(255, 255, 255, 0.05) 75%,transparent 75%,transparent);
-    background-image: linear-gradient(45deg,rgba(255, 255, 255, 0.05) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, 0.05) 50%,rgba(255, 255, 255, 0.05) 75%,transparent 75%,transparent);
-    background-size: 40px 40px;
-    font-size: 30px;
-    line-height: 50px;
+  background-color: $fi-rouge;
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.05), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.05)), color-stop(0.75, rgba(255, 255, 255, 0.05)), color-stop(0.75, transparent), to(transparent)));
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+  font-size: 30px;
+  line-height: 50px;
 }
 
 .fi-refaire-test {
-    color: white;
+  color: white;
 
-    &:hover {
-        color: #ddd;
-    }
+  &:hover {
+    color: #ddd;
+  }
 }
 
 .progress-striped.progress-bar-custom.fi-theme-1 {
-    background-color: rgb(255, 153, 6);
+  background-color: rgb(255, 153, 6);
 }
+
 .progress-striped.progress-bar-custom.fi-theme-2 {
-    background-color: rgb(224, 75, 54);
+  background-color: rgb(224, 75, 54);
 }
+
 .progress-striped.progress-bar-custom.fi-theme-3 {
-    background-color: rgb(50, 191, 124);
+  background-color: rgb(50, 191, 124);
 }
+
 .progress-striped.progress-bar-custom.fi-theme-4 {
-    background-color: rgb(75, 108, 226);
+  background-color: rgb(75, 108, 226);
 }
+
 .progress-striped.progress-bar-custom.fi-theme-5 {
-    background-color: rgb(193, 48, 107);
+  background-color: rgb(193, 48, 107);
 }
+
 .progress-striped.progress-bar-custom.fi-theme-6 {
-    background-color: rgb(45, 178, 171);
+  background-color: rgb(45, 178, 171);
 }
+
 .progress-striped.progress-bar-custom.fi-theme-7 {
-    background-color: rgb(45, 178, 171);
+  background-color: rgb(45, 178, 171);
 }

@@ -1,3 +1,17 @@
 .mandatory-symbol {
   color: red;
 }
+
+.backend {
+  a {
+    color: $brand-primary;
+
+    &.btn i {
+      color: #ffffff;
+    }
+  }
+
+  i {
+    color: $text-color;
+  }
+}

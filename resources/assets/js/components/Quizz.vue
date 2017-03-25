@@ -118,6 +118,10 @@
                 this.showAnswerQuestionText = false
                 const idx = _.indexOf(this.quizz.questions, this.currentQuestion)
                 this.currentQuestion = this.quizz.questions[idx - 1]
+
+                this.$nextTick(() => {
+                    $('[data-toggle="tooltip"]').tooltip();
+                })
             },
             nextQuestion() {
                 this.showAnswerQuestionText = false
@@ -128,6 +132,10 @@
 
                 const idx = _.indexOf(this.quizz.questions, this.currentQuestion)
                 this.currentQuestion = this.quizz.questions[idx + 1]
+
+                this.$nextTick(() => {
+                    $('[data-toggle="tooltip"]').tooltip();
+                })
             }
         },
 
@@ -137,6 +145,11 @@
                 .then((response) => {
                         this.quizz = response.data
                         this.currentQuestion = this.quizz.questions[0];
+
+                        this.$nextTick(() => {
+                            $('[data-toggle="tooltip"]').tooltip();
+                        })
+
                     }
                 )
                 .catch((error) => {

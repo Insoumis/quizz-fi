@@ -26,6 +26,7 @@ class EditQuestionRequest extends FormRequest
         return [
             'category_id' => ['required', 'exists:categories,id'],
             'proposition' => ['required'],
+            'laec_url' => ['url', 'active_url'],
         ];
     }
 }
