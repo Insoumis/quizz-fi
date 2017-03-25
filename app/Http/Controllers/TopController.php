@@ -5,26 +5,37 @@ namespace Melenquizz\Http\Controllers;
 use Illuminate\Database\Eloquent\Collection;
 use Melenquizz\Question;
 use Melenquizz\QuizzQuestion;
+use stdClass;
 
 class TopController extends Controller
 {
     public function index()
     {
+        $questions = Question::with('category')->get();
+
         /** @var Collection $resultByQuestion */
-        $resultByQuestion = QuizzQuestion::groupBy('question_id')
+        $resultByQuestionQuery = QuizzQuestion::groupBy('question_id')
             ->selectRaw('sum(`answer`) as sum, count(`id`) as total, `question_id`')
             ->whereHas('quizz', function ($query) {
                 $query->where('completed', true);
             })
-            ->get()
-            ->mapWithKeys(function (QuizzQuestion $question) {
-                return [$question->question_id => $question->sum / $question->total];
+            ->get();
+
+        $resultByQuestion = $resultByQuestionQuery->mapWithKeys(function (QuizzQuestion $question) {
+            $resultSet = new stdClass;
+            $resultSet->pct = $question->sum / $question->total;
+            $resultSet->total = $question->total;
+            return [$question->question_id => $resultSet];
+        })
+            ->sort(function ($a, $b) {
+                if ($a->pct == $b->pct) {
+                    return $a->total <=> $b->total;
+                }
+                return $a->pct <=> $b->pct;
             })
-            ->sort()
             ->reverse();
 
 
-        $questions = Question::with('category')->get();
 
         return view('top', compact('resultByQuestion', 'questions'));
     }

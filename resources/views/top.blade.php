@@ -26,13 +26,13 @@
                                 <div class="col-md-3">
                                   <img class="img-responsive" title="{{ $question->category->name }}" alt="{{ $question->category->name }}" src="/images/themes/{{ $question->category->slug }}.png" />
                                 </div>
-                                <div class="col-md-6" style="text-align: left;">
+                                <div class="col-md-5" style="text-align: left;">
                                     {{ $question->proposition }}
                                 </div>
-                                <div class="col-md-1">
-                                    {{ round($result, 2) }}%
+                                <div class="col-md-3">
+                                    {{ round($result->pct, 2) }}% <i class="fa fa-info-circle" data-toggle="tooltip" title="Cette proposition a été jouée {{ $result->total }} fois"></i>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-1">
                                   <a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u={{ urlencode($urlToQuestion) }}"><i
                                               class="fa fa-facebook" aria-hidden="true"></i></a>
                                   <a target="_blank" href="http://twitter.com/intent/tweet?status={{ urlencode($question->proposition . ' : ' . $urlToQuestion) }}"><i
@@ -50,3 +50,12 @@
         </div>
     </div>
 @endsection
+
+
+@push('js')
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+@endpush
