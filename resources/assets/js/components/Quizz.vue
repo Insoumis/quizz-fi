@@ -1,7 +1,5 @@
 <template>
     <div class="container-fluid">
-
-        <!-- <h1>Quizz {{ quizzId }}</h1> -->
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 fi-accueil-bloc">
                 <div class="fi-top-menu">
@@ -62,6 +60,7 @@
 <script>
     import axios from 'axios'
     import _ from 'lodash'
+    import $ from 'jquery'
 
     import Question from './Question.vue'
 
@@ -155,6 +154,11 @@
                 .catch((error) => {
                     window.location.href = `/api/quizz/${this.quizzId}`
                 });
+
+            $( "body" ).on( "click", ".fi-description a", (e) => {
+                e.preventDefault();
+                window.open(e.target.href);
+            })
         }
     }
 </script>
